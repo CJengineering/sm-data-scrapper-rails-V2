@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Insta posts</h1>
+<%= form_with url: insta_posts_path, method: :get do |f|  %>
+  <%=f.label :date_start %>
+  <%=f.date_field :date_start %>
+  <%=f.label :date_end %>
+  <%=f.date_field :date_end %>
+  <%=f.submit%>
+<%end%>
+<div id="insta_posts">
+  <% @insta_posts.each do |insta_post| %>
+    <%= render insta_post %>
+    <p>
+      <%= link_to "Show this insta post", insta_post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New insta post", new_insta_post_path %>

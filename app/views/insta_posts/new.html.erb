@@ -1,0 +1,15 @@
+<h1>New insta post</h1>
+
+<%= render "form", insta_post: @insta_post %>
+
+<br>
+<div>
+<h3> Import CSV file for Instagram posts format csv</h3>
+   <%= form_with url: import_insta_posts_path , method: :post do |f| %>
+    <%=f.file_field :file, accept: '.csv' %>
+    <%= f.submit 'Import' %>
+    <%end%>
+</div>
+<div>
+  <%= link_to "Back to insta posts", insta_posts_path %>
+</div>

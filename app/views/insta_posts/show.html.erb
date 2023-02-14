@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @insta_post %>
+
+<div>
+  <%= link_to "Edit this insta post", edit_insta_post_path(@insta_post) %> |
+  <%= link_to "Back to insta posts", insta_posts_path %>
+
+  <%= button_to "Destroy this insta post", @insta_post, method: :delete %>
+</div>

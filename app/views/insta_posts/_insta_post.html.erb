@@ -1,0 +1,44 @@
+<div id="<%= dom_id insta_post %>">
+  <p>
+    <strong>Like count:</strong>
+    <%= insta_post.like_count %>
+  </p>
+
+  <p>
+    <strong>Media type:</strong>
+    <%= insta_post.media_type %>
+  </p>
+
+  <p>
+  <% if insta_post.media_url%>
+    <strong>Media url:</strong>
+    <%= insta_post.media_url%>
+    <%end%>
+  </p>
+
+  <p>
+    <strong>Timestamp:</strong>
+    <%= insta_post.timestamp %>
+  </p>
+
+  <p>
+    <strong>Comments count:</strong>
+    <%= insta_post.comments_count %>
+  </p>
+
+  <p>
+    <strong>Id media:</strong>
+    <%= insta_post.id_media %>
+  </p>
+
+  <p>
+    <strong>Impressions:</strong>
+    <%= insta_post.impressions %>
+  </p>
+
+  <p>
+    <strong>Reach:</strong>
+    <%= insta_post.reach %>
+  </p>
+
+</div>
